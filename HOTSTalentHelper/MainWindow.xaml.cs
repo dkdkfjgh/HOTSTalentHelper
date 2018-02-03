@@ -76,9 +76,20 @@ namespace HOTSTalentHelper
 
             Img.Source = img;
         }
+        int cnt = 0;
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            this.MouseDown += delegate { DragMove(); };
+            this.MouseDown += delegate
+            {
+                DragMove();
+                if (cnt == 30)
+                {
+                    MessageBox.Show("Made by dkdkfjgh@KMOU");
+                    cnt = 0;
+                }
+                cnt++;
+                
+             };
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
