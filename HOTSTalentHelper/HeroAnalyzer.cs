@@ -101,7 +101,12 @@ namespace HOTSTalentHelper
                         talent.Name = item.NextSibling.InnerText;
                         if(talent.Name.Length > 13)
                         {
-                            talent.Name = ReplaceFirstOccurrence(talent.Name, " ", "\n");
+                            if(talent.Name.Contains(" "))
+                            {
+                                talent.Name = ReplaceFirstOccurrence(talent.Name, " ", "\n");
+
+                            }
+
                         }
 
 
