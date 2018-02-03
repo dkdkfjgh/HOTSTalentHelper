@@ -99,7 +99,10 @@ namespace HOTSTalentHelper
                         talent.TalentImageUrl = "http:" + match.Value;
 
                         talent.Name = item.NextSibling.InnerText;
-
+                        if(talent.Name.Length > 13)
+                        {
+                            talent.Name = ReplaceFirstOccurrence(talent.Name, " ", "\n");
+                        }
 
 
                         talent.Desc = item.NextSibling.NextSibling.InnerText;
@@ -134,6 +137,12 @@ namespace HOTSTalentHelper
         private static string SpliceText(string text, int lineLength)
         {
             return Regex.Replace(text, "(.{" + lineLength + "})", "$1" + Environment.NewLine);
+        }
+        private static string ReplaceFirstOccurrence(string Source, string Find, string Replace)
+        {
+            int Place = Source.IndexOf(Find);
+            string result = Source.Remove(Place, Find.Length).Insert(Place, Replace);
+            return result;
         }
     }
 

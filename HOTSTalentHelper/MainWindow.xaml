@@ -15,7 +15,7 @@
     </Window.Background>
 
 
-    <Grid Margin="0,80,0,0" Loaded="Grid_Loaded">
+    <Grid Margin="0,80,0,0" Loaded="Grid_Loaded" d:LayoutOverrides="LeftPosition, RightPosition">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -31,43 +31,11 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border Name="Border1" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Height="80" Width="80">
-            <Image Name="image1" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
-        </Border>
-        <Border Name="Border2" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" Grid.Row="1">
-            <Image Margin="0" Name="image2" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
-        </Border>
-        <Border Name="Border3" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" Grid.Row="2">
-            <Image Margin="0" Name="image3" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
-        </Border>
-        <Border Name="Border4" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" Grid.Row="3">
-            <Image Margin="0" Name="image4" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
-        </Border>
-
-
-
         <Label x:Name="label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="특성 이름" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="160" FontWeight="Bold" Grid.Column="1"/>
         <Label x:Name="label_Copy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="설명" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="240" FontWeight="Bold" Grid.Column="2"/>
         <Label x:Name="label_Copy1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="인기도" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,-40,-1,0" Height="40" Width="80" Grid.Column="4" FontWeight="Bold"/>
         <Label x:Name="label_Copy2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="승률" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="80" Grid.Column="3" FontWeight="Bold"/>
-
-
-        <Label x:Name="TalentName_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Height="80" FontSize="18" FontWeight="Bold" Grid.Column="1"/>
-        <Label x:Name="TalentName_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Height="80" FontSize="18" FontWeight="Bold" Grid.Row="1" Grid.Column="1"/>
-        <Label x:Name="TalentName_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Bottom" Height="80" FontWeight="Bold" FontSize="18" Grid.Row="2" Grid.Column="1"/>
         <Label x:Name="TalentName_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Bottom" Height="80" FontSize="18" FontWeight="Bold" Grid.Row="3" Grid.Column="1"/>
-        <Label x:Name="TalentDesc_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Top" Height="80" FontSize="11" Grid.Column="2"/>
-        <Label x:Name="TalentDesc_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Top" Height="80" FontSize="11" Grid.Column="2" Grid.Row="1"/>
-        <Label x:Name="TalentDesc_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Bottom" Height="80" FontSize="11" Grid.Column="2" Grid.Row="2"/>
-        <Label x:Name="TalentDesc_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Bottom" Height="80" FontSize="11" Grid.Column="2" Grid.Row="3"/>
-        <Label x:Name="TalentPopularity_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" Grid.Column="3" FontWeight="Bold" FontSize="13"/>
-        <Label x:Name="TalentPopularity_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" Grid.Column="3" FontWeight="Bold" FontSize="13" Grid.Row="1"/>
-        <Label x:Name="TalentPopularity_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Grid.Column="3" FontWeight="Bold" FontSize="13" Grid.Row="2"/>
-        <Label x:Name="TalentPopularity_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Grid.Column="3" FontWeight="Bold" FontSize="13" Grid.Row="3"/>
-        <Label x:Name="TalentWinrate_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" Grid.Column="4" FontWeight="Bold" FontSize="13"/>
-        <Label x:Name="TalentWinrate_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" Grid.Column="4" FontWeight="Bold" FontSize="13" Grid.Row="1"/>
-        <Label x:Name="TalentWinrate_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Grid.Column="4" FontSize="13" FontWeight="Bold" Grid.Row="2"/>
-        <Label x:Name="TalentWinrate_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Grid.Column="4" FontWeight="Bold" FontSize="13" Grid.Row="3"/>
 
 
         <Label x:Name="LevelText" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Level : 1" VerticalAlignment="Top" Margin="0,-80,0,0" Height="40" HorizontalAlignment="Right" Width="80" Grid.Column="4" FontWeight="Bold" FontSize="10"/>
@@ -78,6 +46,48 @@
         <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="80,-80,0,0" Height="40" Click="NextButton_Click" Grid.Column="2"/>
         <Button x:Name="PrevButton" Content="Prev" VerticalAlignment="Top" Grid.Column="2" Margin="159,-80,0,0" Height="40" Click="PrevButton_Click"/>
         <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Grid.Column="3" Margin="0,-80,0,0" Height="40" Click="ExitButton_Click"/>
+        <Grid x:Name="SkillGrid1" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="5">
+            <Border x:Name="Border1" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Height="80" Width="80" d:LayoutOverrides="HorizontalAlignment">
+                <Image x:Name="image1" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
+            </Border>
+
+
+            <Label x:Name="TalentName_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Height="80" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="80,0,0,0" Width="160"/>
+            <Label x:Name="TalentDesc_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Top" Height="80" FontSize="11" Margin="240,0,160,0"/>
+            <Label x:Name="TalentPopularity_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="13" Margin="0,0,80,0" d:LayoutOverrides="HorizontalAlignment"/>
+            <Label x:Name="TalentWinrate_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="13" d:LayoutOverrides="HorizontalAlignment"/>
+
+
+        </Grid>
+        <Grid x:Name="SkillGrid2" Grid.Row="1" Grid.ColumnSpan="5">
+            <Border x:Name="Border2" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" d:LayoutOverrides="HorizontalAlignment">
+                <Image Margin="0" x:Name="image2" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
+            </Border>
+            <Label x:Name="TalentName_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Height="80" FontSize="18" FontWeight="Bold" HorizontalAlignment="Left" Margin="80,0,0,0" Width="160"/>
+            <Label x:Name="TalentDesc_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Top" Height="80" FontSize="11" Margin="240,0,160,0"/>
+            <Label x:Name="TalentPopularity_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="13" Margin="0,0,80,0" d:LayoutOverrides="HorizontalAlignment"/>
+            <Label x:Name="TalentWinrate_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="13" d:LayoutOverrides="HorizontalAlignment"/>
+            <Grid x:Name="SkillGrid3" Height="80" Margin="0,0,0,-80" VerticalAlignment="Bottom">
+                <Border x:Name="Border3" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" d:LayoutOverrides="HorizontalAlignment">
+                    <Image Margin="0" x:Name="image3" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
+                </Border>
+                <Label x:Name="TalentName_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Bottom" Height="80" FontWeight="Bold" FontSize="18" HorizontalAlignment="Left" Margin="80,0,0,0" Width="160"/>
+                <Label x:Name="TalentDesc_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Bottom" Height="80" FontSize="11" Margin="240,0,160,0"/>
+                <Label x:Name="TalentPopularity_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" FontWeight="Bold" FontSize="13" Margin="0,0,80,0" d:LayoutOverrides="HorizontalAlignment"/>
+                <Label x:Name="TalentWinrate_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" FontSize="13" FontWeight="Bold" d:LayoutOverrides="HorizontalAlignment"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="SkillGrid4" Grid.Row="3" Grid.ColumnSpan="5">
+            <Border x:Name="Border4" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80" Width="80" d:LayoutOverrides="HorizontalAlignment">
+                <Image Margin="0" x:Name="image4" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
+            </Border>
+
+
+
+            <Label x:Name="TalentDesc_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Description" VerticalAlignment="Bottom" Height="80" FontSize="11" Margin="240,0,160,0"/>
+            <Label x:Name="TalentPopularity_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" FontWeight="Bold" FontSize="13" Margin="0,0,80,0" d:LayoutOverrides="HorizontalAlignment"/>
+            <Label x:Name="TalentWinrate_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" FontWeight="Bold" FontSize="13" d:LayoutOverrides="HorizontalAlignment"/>
+        </Grid>
 
     </Grid>
 

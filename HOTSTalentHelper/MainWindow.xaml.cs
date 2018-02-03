@@ -97,10 +97,10 @@ namespace HOTSTalentHelper
 
         void UpdateInfo()
         {
-            Border1.BorderBrush = Brushes.Green;
-            Border2.BorderBrush = Brushes.Green;
-            Border3.BorderBrush = Brushes.Green;
-            Border4.BorderBrush = Brushes.Green;
+            Border1.BorderBrush = Brushes.GreenYellow;
+            Border2.BorderBrush = Brushes.GreenYellow;
+            Border3.BorderBrush = Brushes.GreenYellow;
+            Border4.BorderBrush = Brushes.GreenYellow;
 
 
             LevelText.Content = "Level : " + CurrentLevel.ToString();
@@ -259,6 +259,7 @@ namespace HOTSTalentHelper
             TalentByLevel.Clear();
 
 
+
             if (TalentName_1.Content as string == null)
             {
                 Border4.BorderBrush = Brushes.Transparent;
@@ -283,10 +284,9 @@ namespace HOTSTalentHelper
             if (TalentName_4.Content as string == null)
             {
                 Border4.BorderBrush = Brushes.Transparent;
-
                 return;
             }
-
+        
 
 
         }
