@@ -257,6 +257,38 @@ namespace HOTSTalentHelper
             }
 
             TalentByLevel.Clear();
+
+
+            if (TalentName_1.Content as string == null)
+            {
+                Border4.BorderBrush = Brushes.Transparent;
+                Border3.BorderBrush = Brushes.Transparent;
+                Border2.BorderBrush = Brushes.Transparent;
+                Border1.BorderBrush = Brushes.Transparent;
+                return;
+            }
+            if (TalentName_2.Content as string == null)
+            {
+                Border4.BorderBrush = Brushes.Transparent;
+                Border3.BorderBrush = Brushes.Transparent;
+                Border2.BorderBrush = Brushes.Transparent;
+                return;
+            }
+            if (TalentName_3.Content as string == null)
+            {
+                Border4.BorderBrush = Brushes.Transparent;
+                Border3.BorderBrush = Brushes.Transparent;
+                return;
+            }
+            if (TalentName_4.Content as string == null)
+            {
+                Border4.BorderBrush = Brushes.Transparent;
+
+                return;
+            }
+
+
+
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
