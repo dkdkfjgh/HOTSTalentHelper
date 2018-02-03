@@ -11,7 +11,7 @@
         AllowsTransparency="True" ResizeMode="NoResize"
         >
     <Window.Background>
-        <SolidColorBrush Opacity="0.7" Color="#FFE2B1B1"/>
+        <SolidColorBrush Opacity="0.7" Color="#FFBBEAE3"/>
     </Window.Background>
 
 
