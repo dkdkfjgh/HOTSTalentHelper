@@ -15,7 +15,7 @@
     </Window.Background>
 
 
-    <Grid Margin="0,80,0,0" Loaded="Grid_Loaded" d:LayoutOverrides="LeftPosition, RightPosition">
+    <Grid Margin="0,80,0,0" Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -40,12 +40,12 @@
 
         <Label x:Name="LevelText" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Level : 1" VerticalAlignment="Top" Margin="0,-80,0,0" Height="40" HorizontalAlignment="Right" Width="80" Grid.Column="4" FontWeight="Bold" FontSize="10"/>
 
-        <TextBox x:Name="textBox" BorderBrush="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="41" TextWrapping="Wrap" Text="프로비우스" VerticalAlignment="Top" Margin="0,-80,80,0" Grid.ColumnSpan="2" />
+        <TextBox x:Name="textBox" BorderBrush="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="42" TextWrapping="Wrap" Text="프로비우스" VerticalAlignment="Top" Margin="-1,-81,79,0" Grid.ColumnSpan="2" Background="#FFDFE6CC" FontSize="13" />
 
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Right" VerticalAlignment="Top" Width="160" Margin="0,-80,160,0" Height="40" Click="SearchButton_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="80,-80,0,0" Height="40" Click="NextButton_Click" Grid.Column="2"/>
-        <Button x:Name="PrevButton" Content="Prev" VerticalAlignment="Top" Grid.Column="2" Margin="159,-80,0,0" Height="40" Click="PrevButton_Click"/>
-        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Grid.Column="3" Margin="0,-80,0,0" Height="40" Click="ExitButton_Click"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Right" VerticalAlignment="Top" Width="162" Margin="0,-81,159,0" Height="41" Click="SearchButton_Click" Grid.ColumnSpan="2" Grid.Column="1" Background="#FF90ECDE" FontWeight="Bold" FontSize="14" BorderBrush="{x:Null}"/>
+        <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Margin="79,-81,0,0" Height="41" Click="NextButton_Click" Grid.Column="2" Background="#FF90ECDE" FontWeight="Bold" FontSize="14" BorderBrush="{x:Null}"/>
+        <Button x:Name="PrevButton" Content="Prev" VerticalAlignment="Top" Grid.Column="2" Margin="159,-81,79,0" Height="41" Click="PrevButton_Click" Background="#FF90ECDE" FontWeight="Bold" FontSize="14" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Top" Width="82" Grid.Column="2" Margin="0,-81,79,0" Height="41" Click="ExitButton_Click" Background="#FFECC290" FontSize="14" FontWeight="Bold" BorderBrush="{x:Null}" Grid.ColumnSpan="3"/>
         <Grid x:Name="SkillGrid1" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="5">
             <Border x:Name="Border1" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Height="80" Width="80" d:LayoutOverrides="HorizontalAlignment">
                 <Image x:Name="image1" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
