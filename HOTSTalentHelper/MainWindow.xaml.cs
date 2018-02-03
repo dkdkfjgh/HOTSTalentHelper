@@ -88,7 +88,7 @@ namespace HOTSTalentHelper
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentLevel == 20) return;
-            if (CurrentLevel == 16) { CurrentLevel = 20; UpdateInfo();  return; }
+            if (CurrentLevel == 16) { CurrentLevel = 20; UpdateInfo(); return; }
             CurrentLevel += 3;
             UpdateInfo();
         }
@@ -107,14 +107,14 @@ namespace HOTSTalentHelper
 
             List<Talent> TalentByLevel = new List<Talent>();
             int level = CurrentLevel;
-            if(HAnalyze.Analyze(textBox.Text) == false)
+            if (HAnalyze.Analyze(textBox.Text) == false)
             {
                 MessageBox.Show("Failed to Search!");
             }
 
-            for(int i = 0; i < HAnalyze.SelectedHero.Tal.Count; i++)
+            for (int i = 0; i < HAnalyze.SelectedHero.Tal.Count; i++)
             {
-                if(HAnalyze.SelectedHero.Tal[i].Level == "Level: "+level.ToString())
+                if (HAnalyze.SelectedHero.Tal[i].Level == "Level: " + level.ToString())
                 {
                     TalentByLevel.Add(HAnalyze.SelectedHero.Tal[i].Clone() as Talent);
                 }
@@ -231,7 +231,7 @@ namespace HOTSTalentHelper
 
             double[] pops = new double[4];
 
-            for(int i = 0; i < TalentByLevel.Count; i++)
+            for (int i = 0; i < TalentByLevel.Count; i++)
             {
                 TalentByLevel[i].Popularity = TalentByLevel[i].Popularity.Replace(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.PercentSymbol, "");
                 double.TryParse(TalentByLevel[i].Popularity, out pops[i]);
@@ -239,7 +239,7 @@ namespace HOTSTalentHelper
 
 
 
-            if(pops[0] == pops.Max())
+            if (pops[0] == pops.Max())
             {
                 Border1.BorderBrush = Brushes.Red;
             }
@@ -268,7 +268,7 @@ namespace HOTSTalentHelper
         private void PrevButton_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentLevel == 1) return;
-            if (CurrentLevel == 20) { CurrentLevel = 16; UpdateInfo();  return; }
+            if (CurrentLevel == 20) { CurrentLevel = 16; UpdateInfo(); return; }
             CurrentLevel -= 3;
             UpdateInfo();
         }

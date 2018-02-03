@@ -48,7 +48,7 @@ namespace HOTSTalentHelper
             HeroinKorean = HeroKoreanName;
 
 
-            
+
 
 
             foreach (Hero item in HeroesList)
