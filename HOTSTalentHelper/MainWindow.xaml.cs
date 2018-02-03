@@ -97,6 +97,12 @@ namespace HOTSTalentHelper
 
         void UpdateInfo()
         {
+            Border1.BorderBrush = Brushes.Green;
+            Border2.BorderBrush = Brushes.Green;
+            Border3.BorderBrush = Brushes.Green;
+            Border4.BorderBrush = Brushes.Green;
+
+
             LevelText.Content = "Level : " + CurrentLevel.ToString();
 
             List<Talent> TalentByLevel = new List<Talent>();
@@ -114,10 +120,12 @@ namespace HOTSTalentHelper
                 }
             }
 
+
+
             switch (HAnalyze.TalentCountbyNum(CurrentLevel))
             {
                 case 1:
-                    SetImagefromUrl(TalentByLevel[0].SkillImageUrl, image1);
+                    SetImagefromUrl(TalentByLevel[0].TalentImageUrl, image1);
                     TalentName_1.Content = TalentByLevel[0].Name;
                     TalentDesc_1.Content = TalentByLevel[0].Desc;
                     TalentPopularity_1.Content = TalentByLevel[0].Popularity;
@@ -143,13 +151,13 @@ namespace HOTSTalentHelper
 
                     break;
                 case 2:
-                    SetImagefromUrl(TalentByLevel[0].SkillImageUrl, image1);
+                    SetImagefromUrl(TalentByLevel[0].TalentImageUrl, image1);
                     TalentName_1.Content = TalentByLevel[0].Name;
                     TalentDesc_1.Content = TalentByLevel[0].Desc;
                     TalentPopularity_1.Content = TalentByLevel[0].Popularity;
                     TalentWinrate_1.Content = TalentByLevel[0].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[1].SkillImageUrl, image2);
+                    SetImagefromUrl(TalentByLevel[1].TalentImageUrl, image2);
                     TalentName_2.Content = TalentByLevel[1].Name;
                     TalentDesc_2.Content = TalentByLevel[1].Desc;
                     TalentPopularity_2.Content = TalentByLevel[1].Popularity;
@@ -169,19 +177,19 @@ namespace HOTSTalentHelper
 
                     break;
                 case 3:
-                    SetImagefromUrl(TalentByLevel[0].SkillImageUrl, image1);
+                    SetImagefromUrl(TalentByLevel[0].TalentImageUrl, image1);
                     TalentName_1.Content = TalentByLevel[0].Name;
                     TalentDesc_1.Content = TalentByLevel[0].Desc;
                     TalentPopularity_1.Content = TalentByLevel[0].Popularity;
                     TalentWinrate_1.Content = TalentByLevel[0].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[1].SkillImageUrl, image2);
+                    SetImagefromUrl(TalentByLevel[1].TalentImageUrl, image2);
                     TalentName_2.Content = TalentByLevel[1].Name;
                     TalentDesc_2.Content = TalentByLevel[1].Desc;
                     TalentPopularity_2.Content = TalentByLevel[1].Popularity;
                     TalentWinrate_2.Content = TalentByLevel[1].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[2].SkillImageUrl, image3);
+                    SetImagefromUrl(TalentByLevel[2].TalentImageUrl, image3);
                     TalentName_3.Content = TalentByLevel[2].Name;
                     TalentDesc_3.Content = TalentByLevel[2].Desc;
                     TalentPopularity_3.Content = TalentByLevel[2].Popularity;
@@ -194,31 +202,60 @@ namespace HOTSTalentHelper
                     TalentWinrate_4.Content = null;
                     break;
                 case 4:
-                    SetImagefromUrl(TalentByLevel[0].SkillImageUrl, image1);
+                    SetImagefromUrl(TalentByLevel[0].TalentImageUrl, image1);
                     TalentName_1.Content = TalentByLevel[0].Name;
                     TalentDesc_1.Content = TalentByLevel[0].Desc;
                     TalentPopularity_1.Content = TalentByLevel[0].Popularity;
                     TalentWinrate_1.Content = TalentByLevel[0].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[1].SkillImageUrl, image2);
+                    SetImagefromUrl(TalentByLevel[1].TalentImageUrl, image2);
                     TalentName_2.Content = TalentByLevel[1].Name;
                     TalentDesc_2.Content = TalentByLevel[1].Desc;
                     TalentPopularity_2.Content = TalentByLevel[1].Popularity;
                     TalentWinrate_2.Content = TalentByLevel[1].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[2].SkillImageUrl, image3);
+                    SetImagefromUrl(TalentByLevel[2].TalentImageUrl, image3);
                     TalentName_3.Content = TalentByLevel[2].Name;
                     TalentDesc_3.Content = TalentByLevel[2].Desc;
                     TalentPopularity_3.Content = TalentByLevel[2].Popularity;
                     TalentWinrate_3.Content = TalentByLevel[2].Winrate;
 
-                    SetImagefromUrl(TalentByLevel[3].SkillImageUrl, image4);
+                    SetImagefromUrl(TalentByLevel[3].TalentImageUrl, image4);
                     TalentName_4.Content = TalentByLevel[3].Name;
                     TalentDesc_4.Content = TalentByLevel[3].Desc;
                     TalentPopularity_4.Content = TalentByLevel[3].Popularity;
                     TalentWinrate_4.Content = TalentByLevel[3].Winrate;
                     break;
             }
+
+
+            double[] pops = new double[4];
+
+            for(int i = 0; i < TalentByLevel.Count; i++)
+            {
+                TalentByLevel[i].Popularity = TalentByLevel[i].Popularity.Replace(System.Globalization.CultureInfo.CurrentCulture.NumberFormat.PercentSymbol, "");
+                double.TryParse(TalentByLevel[i].Popularity, out pops[i]);
+            }
+
+
+
+            if(pops[0] == pops.Max())
+            {
+                Border1.BorderBrush = Brushes.Red;
+            }
+            else if (pops[1] == pops.Max())
+            {
+                Border2.BorderBrush = Brushes.Red;
+            }
+            else if (pops[2] == pops.Max())
+            {
+                Border3.BorderBrush = Brushes.Red;
+            }
+            else if (pops[3] == pops.Max())
+            {
+                Border4.BorderBrush = Brushes.Red;
+            }
+
             TalentByLevel.Clear();
         }
 

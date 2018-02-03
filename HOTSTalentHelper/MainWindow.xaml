@@ -23,18 +23,27 @@
             <ColumnDefinition Width="172*"/>
             <ColumnDefinition Width="71*"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="#FF00FF2E" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Height="80" Width="80">
+        <Border Name="Border1" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Height="80" Width="80">
             <Image Name="image1" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
         </Border>
-        <Border BorderBrush="#FF00FF2E" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Height="80" Width="80">
+        <Border Name="Border2" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,80,0,0" Height="80" Width="80">
             <Image Margin="0" Name="image2" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
         </Border>
-        <Border BorderBrush="#FF00FF2E" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,160,0,0" Height="80" Width="80">
+        <Border Name="Border3" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,160,0,0" Height="80" Width="80">
             <Image Margin="0" Name="image3" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
         </Border>
-        <Border BorderBrush="#FF00FF2E" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,240,0,0" Height="80" Width="80">
+        <Border Name="Border4" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,240,0,0" Height="80" Width="80">
             <Image Margin="0" Name="image4" Stretch="Uniform" TextElement.Foreground="#FF5B5B5B"/>
         </Border>
+
+
+
+        <Label x:Name="label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="특성 이름" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,-40,0,0" Height="40" Width="160" FontWeight="Bold"/>
+        <Label x:Name="label_Copy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="설명" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,-40,0,0" Height="40" Width="240" Grid.ColumnSpan="3" FontWeight="Bold"/>
+        <Label x:Name="label_Copy1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="인기도" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,-40,0,0" Height="40" Width="80" Grid.Column="2" FontWeight="Bold"/>
+        <Label x:Name="label_Copy2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="승률" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="163,-40,0,0" Height="40" Width="80" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold"/>
+
+
         <Label x:Name="TalentName_1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Margin="80,0,35,0" Height="80" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="TalentName_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Top" Margin="80,80,35,0" Height="80" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="TalentName_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Bottom" Margin="80,0,35,80" Height="80" FontWeight="Bold" FontSize="18"/>
@@ -51,16 +60,17 @@
         <Label x:Name="TalentWinrate_2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Top" Width="80" Margin="0,80,0,0" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="13"/>
         <Label x:Name="TalentWinrate_3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Margin="0,0,0,80" Grid.Column="2" Grid.ColumnSpan="2" FontSize="13" FontWeight="Bold"/>
         <Label x:Name="TalentWinrate_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="0.0%" HorizontalAlignment="Right" Height="80" VerticalAlignment="Bottom" Width="80" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="13"/>
-        <TextBox x:Name="textBox" BorderBrush="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="41" TextWrapping="Wrap" Text="프로비우스" VerticalAlignment="Top" Margin="0,-80,115,0" />
+
+
         <Label x:Name="LevelText" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Level : 1" VerticalAlignment="Top" Margin="0,-80,0,0" Height="40" HorizontalAlignment="Right" Width="80" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="10"/>
+
+        <TextBox x:Name="textBox" BorderBrush="Transparent" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="41" TextWrapping="Wrap" Text="프로비우스" VerticalAlignment="Top" Margin="0,-80,115,0" />
+        
         <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Right" VerticalAlignment="Top" Width="160" Margin="0,-80,78,0" Height="40" Click="SearchButton_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Grid.Column="1" Margin="44,-80,0,0" Height="40" Click="NextButton_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="PrevButton" Content="Prev" VerticalAlignment="Top" Grid.Column="2" Margin="2,-80,89.5,0" Height="40" Click="PrevButton_Click"/>
         <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Grid.Column="2" Margin="0,-80,9.5,0" Height="40" Click="ExitButton_Click"/>
-        <Label x:Name="label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="특성 이름" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,-40,0,0" Height="40" Width="160" FontWeight="Bold"/>
-        <Label x:Name="label_Copy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="설명" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,-40,0,0" Height="40" Width="240" Grid.ColumnSpan="3" FontWeight="Bold"/>
-        <Label x:Name="label_Copy1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="인기도" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,-40,0,0" Height="40" Width="80" Grid.Column="2" FontWeight="Bold"/>
-        <Label x:Name="label_Copy2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="승률" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="163,-40,0,0" Height="40" Width="80" Grid.Column="2" Grid.ColumnSpan="2" FontWeight="Bold"/>
-    </Grid>
+        
+           </Grid>
 
 </Window>

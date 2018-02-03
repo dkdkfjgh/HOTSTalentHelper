@@ -90,13 +90,13 @@ namespace HOTSTalentHelper
                     if (item.InnerHtml.Contains("png") == true)
                     {
 
-                        //Console.WriteLine("Skill Image Link : {0}", item.OuterHtml);
+                        //Console.WriteLine("Talent Image Link : {0}", item.OuterHtml);
 
 
 
                         Regex regex = new Regex(@"(?:\/\/.*\.(?:png|jpg))");
                         Match match = regex.Match(item.OuterHtml);
-                        talent.SkillImageUrl = "http:" + match.Value;
+                        talent.TalentImageUrl = "http:" + match.Value;
 
                         talent.Name = item.NextSibling.InnerText;
 
@@ -307,7 +307,7 @@ namespace HOTSTalentHelper
         public string Desc = ""; //설명
         public string Popularity = ""; //선호도
         public string Winrate = ""; //승률
-        public string SkillImageUrl = "";
+        public string TalentImageUrl = "";
         public object Clone()
         {
             return new Talent()
@@ -317,7 +317,7 @@ namespace HOTSTalentHelper
                 Desc = this.Desc,
                 Popularity = this.Popularity,
                 Winrate = this.Winrate,
-                SkillImageUrl = this.SkillImageUrl
+                TalentImageUrl = this.TalentImageUrl
             };
         }
     }
