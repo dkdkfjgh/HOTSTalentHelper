@@ -33,8 +33,8 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="label" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="특성 이름" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="160" FontWeight="Bold" Grid.Column="1"/>
         <Label x:Name="label_Copy" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="설명" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="240" FontWeight="Bold" Grid.Column="2"/>
-        <Label x:Name="label_Copy1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="인기도" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,-40,-1,0" Height="40" Width="80" Grid.Column="4" FontWeight="Bold"/>
-        <Label x:Name="label_Copy2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="승률" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="80" Grid.Column="3" FontWeight="Bold"/>
+        <Label x:Name="label_Copy1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="승률" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,-40,-1,0" Height="40" Width="80" Grid.Column="4" FontWeight="Bold"/>
+        <Label x:Name="label_Copy2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="인기도" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-40,0,0" Height="40" Width="80" Grid.Column="3" FontWeight="Bold"/>
         <Label x:Name="TalentName_4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Name" VerticalAlignment="Bottom" Height="80" FontSize="18" FontWeight="Bold" Grid.Row="3" Grid.Column="1"/>
 
 
